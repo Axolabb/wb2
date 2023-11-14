@@ -1,0 +1,235 @@
+@import url('https://fonts.cdnfonts.com/css/inspiration');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.cdnfonts.com/css/gabriola');
+* {
+    line-height: 150%;
+}
+body {
+    background-color: white;
+    font-family: Montserrat;
+}
+
+/* -------------------------------HEADER---------------------------------- */
+.container {
+    max-width: 1310px;
+    margin: 0 auto;
+    padding: 0 15px;
+    height: 100%;
+}
+.header {
+    background: url('../media/bg-header.png') 50% 0 / cover no-repeat;
+    width: 100vw;
+    height: auto;
+}
+.header__logo-and-nav {
+    display: inline-flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 75px;
+}
+.header-nav {
+    display: flex;
+    gap: 40px;
+    right: 25px;
+}
+.burger-icon {
+    position: absolute;
+    display: none;
+    right: 25px;
+    top: 25px;
+}
+.burger-icon span,
+.burger-icon span::before,
+.burger-icon span::after {
+    display: block;
+    width: 40px;
+    height: 3px;
+    border-radius: 100px;
+    background: black;
+}
+.burger-icon span {
+    position: relative;
+}
+.burger-icon span::before,
+.burger-icon span::after {
+    content: '';
+    position: absolute;
+}
+.burger-icon span::before {
+    top: -10px;
+}
+
+.burger-icon span::after {
+    bottom: -10px;
+}
+.header__text-and-img {
+    align-items: end;
+    display: inline-flex;
+    height: 0;
+    width: 80%;
+    gap: 30px;
+    justify-content: space-between;
+    margin: 500px 0 200px 0;
+    padding: 0 15px;
+}
+.header-text-block {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+}
+.header-text__start {
+    color: #B197B2;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.header-text__welcome {
+    color: #1F1711;
+    font-family: Gabriola;
+    font-size: 74px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 82%;
+    width: 520px;
+}
+.header-text__description {
+    line-height: 150%;
+    width: 360px;
+}
+.header__sign-button {
+    display: flex;
+    width: 358px;
+    padding: 18px 36px;
+    justify-content: center;
+    border-radius: 60px;
+    background: #FFA55C;
+    font-weight: 500;
+    font-size: 16px;
+}
+.header-img-block__woman{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 377px;
+    height: 372px;
+    border-radius: 20px;
+    background: #CEAAD0;
+}
+.woman-cake {
+    position: absolute;
+    bottom: 0;
+}
+.header-img-block__button-block {
+    position: absolute;
+    bottom: 50px;
+    right: -160px;
+    display: inline-flex;
+    gap: 10px;
+}
+.header-img-block__mobile {
+    display: none;
+    margin: 30px 0 30px 80px;
+}
+.play-button {
+    background-image: url('../media/play.svg'); 
+    background-position: center -16px; 
+    height: 78px; 
+    width: 78px; 
+    border-radius: 100%; 
+    cursor: pointer
+}
+.play-button--mobile {
+    background-image: url('../media/play.svg'); 
+    background-position: center -16px; 
+    height: 78px; 
+    width: 78px; 
+    border-radius: 100%; 
+    cursor: pointer;
+    left: -78px;
+    bottom: -30px;
+    
+}
+.play-button::after, .play-button--mobile{
+    content: '';
+    position: absolute;
+    height: 78px;
+    width: 78px;
+    border-radius: 100%;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.226);
+}
+.header-img-text {
+    width: 115px;
+}
+.header-img-text--mobile {
+    width: 350px;
+}
+@media (max-width: 1140px) {
+    .header-img-block__button-block {
+        bottom: -120px;
+        right: 0%;
+        gap: 10px;
+        align-items: center;
+    }
+    .header-img-text {
+        width: 300px;
+    }
+    .header__text-and-img {
+        width: 100%;
+    }
+}
+@media (max-width: 980px) {
+    .header-img-block {
+        display: none;
+    }
+    .header__text-and-img {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 300px 0 400px 0;
+    }
+    .header-text-block {
+        align-items: center;
+    }
+    .header-img-block__mobile {
+        display: block;
+    }
+}
+@media(max-width: 750px) {
+   .header-nav {
+    display: none;
+   }
+    .burger-icon {
+        position: absolute;
+        display: flex;
+        height: 50px;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        color: black;
+    }
+    .header-text__welcome {
+        width: 100%;
+    }
+}
+@media(max-width: 450px) {
+    .header-img-text--mobile {
+        max-width: 70vw;
+        text-align: start;
+        margin-left: 10px;
+    }
+    .header-text-block {
+        gap: 2vh;
+    }
+    .header__sign-button {
+        width: 90vw;
+    }
+    .header-text__description{
+        width: 100%;
+    }
+    .header-img-text--mobile {
+       top: 500px;
+    }
+}
+/* -------------------------------BODY---------------------------------- */
